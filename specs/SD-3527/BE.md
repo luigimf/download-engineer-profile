@@ -21,7 +21,8 @@ One authenticated endpoint. Takes an engineer id, returns `application/pdf`.
 
 ## Cobranding
 
-- Before rendering, resolve the requesting manager's Client entry. *Cobranded Client* = Yes → pass the client's logo (SD-3325 upload, PNG 157 × 56) to the template for the cobranded header; otherwise render the standard header. Rules in `specs/SD-3528/`.
+- *Outdated on 25 Sep. Previously: "Before rendering, resolve the requesting manager's Client entry. Cobranded Client = Yes → pass the client's logo (SD-3325 upload, PNG 157 × 56) to the template for the cobranded header; otherwise render the standard header. Rules in `specs/SD-3528/`."*
+- Before rendering, resolve the requesting manager's Client entry. *Cobranded Client* = Yes → pass the client's logo (SD-3325 upload, SVG, 157 × 56 artboard) to the template for the cobranded header; otherwise render the standard header. Rules in `specs/SD-3528/`.
 - Requests without a manager context (Zoho, SD-3529) always render the standard header.
 - Record the variant in the audit entry (`standard` / `cobranded:{clientId}`).
 

@@ -19,10 +19,12 @@ Layout handoff for **SD-3528**. The document rendered by SD-3527. `prototype/ind
 | **Standard** | Downloading manager's Client entry has *Cobranded Client* = No, or no manager context (Zoho, SD-3529) | Castillians logo with tagline, 36px tall, linking to castillians.com |
 | **Cobranded** | Downloading manager's Client entry has *Cobranded Client* = Yes (SD-3325) | **Client logo** first, then a 1px × 24px `#E5E5E5` divider, 12px gaps,, then the **Powered by Castillians** logo (linking to castillians.com) |
 
-- Client logo: the PNG uploaded in SD-3325's Cobranded Platform Set Up card (exactly 157 × 56), rendered at 90 × 32 — same aspect, never cropped or recoloured.
-- Powered by Castillians: `assets/logo-powered-by-castillians.png` (184 × 57), rendered at 84 × 26 — slightly smaller than the client logo, so the client leads.
+- *Outdated on 25 Sep. Previously: "Client logo: the PNG uploaded in SD-3325's Cobranded Platform Set Up card (exactly 157 × 56), rendered at 90 × 32 — same aspect, never cropped or recoloured. Powered by Castillians: assets/logo-powered-by-castillians.png (184 × 57), rendered at 84 × 26."*
+- Client logo: the **SVG** uploaded in SD-3325's Cobranded Platform Set Up card (157 × 56 artboard), rendered at 90 × 32 as vector — same aspect, never cropped, recoloured or rasterised.
+- Powered by Castillians: `assets/logo-powered-by-castillians.svg` (184 × 57 artboard), rendered at 84 × 26 as vector — slightly smaller than the client logo, so the client leads.
+- Both logos stay vector in the output PDF, so they print sharp at any zoom.
 - The variant applies to **every sheet**. Right side of the band (Vetted Engineer label, engineer name on continuation sheets), body and footer are identical in both.
-- Prototypes: `prototype/index.html` (standard) and `prototype/cobranded.html` (cobranded). Pixel targets: `reference-pages/` and `reference-pages/cobranded/`.
+- Prototypes: `prototype/index.html` (standard) and `prototype/cobranded.html` (cobranded). Reference PDFs: `prototype/reference.pdf` and `prototype/reference-cobranded.pdf`.
 
 ## Section order
 

@@ -10,8 +10,8 @@ A **Download Profile** button on the engineer profile page returns the engineer'
 |---|---|
 | `prototype/index.html` | The document prototype, **standard** output — open it in a browser. Self-contained (styles, fonts, logo, marks, photo inlined), no build step. **This is the visual and structural source of truth for the PDF.** |
 | `prototype/cobranded.html` | The same prototype opening on the **cobranded** output (client logo + Powered by Castillians). Example client: Exertis. |
-| `prototype/reference-pages/page-1..5.png` | Pixel target for QA, **standard** output — each A4 sheet at 2× (1588 × 2246 px). |
-| `prototype/reference-pages/cobranded/page-1..5.png` | Pixel target for QA, **cobranded** output (example client: Exertis). |
+| `prototype/reference.pdf` | Reference PDF for QA, **standard** output — A4, printed from the prototype. Compare generated output against it page for page. |
+| `prototype/reference-cobranded.pdf` | Reference PDF for QA, **cobranded** output (example client: Exertis). |
 | `specs/SD-3526/` | Download button — `FE.md`, `BE.md` |
 | `specs/SD-3527/` | PDF generation service — `FE.md`, `BE.md` |
 | `specs/SD-3528/` | PDF document content & layout — `FE.md`, `BE.md` |
@@ -39,7 +39,7 @@ The prototype is a **print template**, not a screen. It renders five fixed A4 sh
 The header depends on **who downloads**:
 
 - **Standard** — the downloading manager's Client entry has *Cobranded Client* = No (or there is no manager context, e.g. the Zoho record). Header: the Castillians logo with tagline, as today.
-- **Cobranded** — the manager's Client entry has *Cobranded Client* = Yes (SD-3325). Header: the **client's logo** (the one uploaded in the Cobranded Platform Set Up card — PNG, exactly 157 × 56) top left, then the **Powered by Castillians** logo beside it. Nothing else in the document changes.
+- **Cobranded** — the manager's Client entry has *Cobranded Client* = Yes (SD-3325). Header: the **client's logo** (the one uploaded in the Cobranded Platform Set Up card — SVG, 157 × 56 artboard) top left, then the **Powered by Castillians** logo beside it. Nothing else in the document changes.
 
 ## Build order
 
@@ -59,7 +59,7 @@ The header depends on **who downloads**:
 - **Audit log is required** — who, which engineer, when, and the origin (Manager dashboard or Zoho). Recorded in SD-3527.
 - **Access: any user logged in to the Manager dashboard may download any engineer's profile.** No role gate, no bench gate, no Engineer Finder dependency.
 - **Engineers do not get this download** on their own dashboard.
-- **Pixel target** for QA lives at `prototype/reference-pages/page-1..5.png`.
+- **Reference PDFs** for QA: `prototype/reference.pdf` (standard) and `prototype/reference-cobranded.pdf` (cobranded).
 
 ## Open questions
 

@@ -4,14 +4,15 @@ path: .
 
 ## Last sync
 
-date: 2026-09-25T00:00:00Z
+date: 2026-09-25T14:45:00Z
 
 ### Updated in this project
-- Added the cobranded output (client logo + Powered by Castillians): `prototype/cobranded.html` and `reference-pages/cobranded/`.
+- Added the cobranded output (client logo + Powered by Castillians): `prototype/cobranded.html`.
 - Created the handover bundle: prototype + per-story FE/BE specs for epic SD-3525.
 - Bundled the `Engineer Profile PDF` canvas as a self-contained `prototype/index.html`.
-- Added per-page PNG pixel targets under `prototype/reference-pages/`.
+- Replaced the PNG pixel targets with reference PDFs: `prototype/reference.pdf`, `prototype/reference-cobranded.pdf`.
 - Added SD-3529 (Zoho engineer record) and settled access + audit rules on SD-3526/SD-3527.
+- Cobranded header now uses SVG logos (client logo + Powered by Castillians) instead of PNG; `reference-cobranded.pdf` regenerated with them.
 
 ## Screen map
 
@@ -19,4 +20,4 @@ date: 2026-09-25T00:00:00Z
 |---|---|
 | `prototype/index.html` | `Engineer Profile PDF.dc.html` (this project) |
 | `specs/SD-3526`, `specs/SD-3527`, `specs/SD-3528`, `specs/SD-3529` | Jira SD-3525 epic + the profile-page captures in `uploads/` |
-| `prototype/reference-pages/` | Per-sheet captures of `Engineer Profile PDF.dc.html` |
+| `prototype/reference.pdf`, `prototype/reference-cobranded.pdf` | A4 print of `Engineer Profile PDF.dc.html`, standard and cobranded |
