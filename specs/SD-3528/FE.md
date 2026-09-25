@@ -37,6 +37,7 @@ Layout handoff for **SD-3528**. The document rendered by SD-3527. `prototype/ind
 ## Profile header
 
 - **Profile picture**, circular, 76px, **cropped exactly as the profile page crops it** (cover, centred), with the blue vetted mark on the lower right. Initials avatar only when no picture is stored.
+- Source image is the **~300 × 300 JPEG** the service prepares (SD-3527) — 4× the printed size, sharp in print, a few KB in the file.
 - Name in display type; the five rating bars and the score beside it; **"Based on n reviews"** in small body type.
 - Chips, in this order: **availability** (green dot), **seniority level**, **country** (circular flag), **timezone group** (bold code + cities). Chip height ≈ 1.75× its type size — 10px text, 4px/8px padding, `--gray-50` fill, 1px `--gray-150` border, `--radius-md`.
 

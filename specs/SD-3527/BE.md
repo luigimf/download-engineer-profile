@@ -35,6 +35,8 @@ One authenticated endpoint. Takes an engineer id, returns `application/pdf`.
 | Fonts | Embedded (Bricolage Grotesque, Montserrat) |
 | Colour | Print-colour accurate (`print-color-adjust: exact`) |
 | Pages | As many as the content needs; never truncated to fit a budget |
+| Profile photo | Resized server-side **before rendering** to about **300 × 300 px JPEG**, centre-cropped square (same crop as the profile page). Never embedded at upload resolution. |
+| Expected size | Well under 1 MB for a typical profile. The reference PDFs are ~3 MB only because they were printed with text as outlines — do not use them as a size target. |
 | Filename | `Castillians-{Engineer-Name}-Profile-{YYYY-MM-DD}.pdf`, in `Content-Disposition` |
 
 ## Failure and abuse

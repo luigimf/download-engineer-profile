@@ -60,6 +60,8 @@ The header depends on **who downloads**:
 - **Access: any user logged in to the Manager dashboard may download any engineer's profile.** No role gate, no bench gate, no Engineer Finder dependency.
 - **Engineers do not get this download** on their own dashboard.
 - **Reference PDFs** for QA: `prototype/reference.pdf` (standard) and `prototype/reference-cobranded.pdf` (cobranded).
+- **Profile photo is resized to ~300 × 300 JPEG before rendering** (SD-3527). The prototype uses the resized photo.
+- **File size.** The reference PDFs are ~3 MB because the tool that printed them converts text to outlines. A server-side render with embedded, subset fonts (as SD-3527 requires) should land well under 1 MB for a profile like this. Compare **layout** against the references, not file size.
 
 ## Open questions
 

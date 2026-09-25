@@ -33,6 +33,7 @@ The document is an **extraction** of the engineer's live Vetted Engineer Profile
 5. **Ordering is the profile page's ordering** — skills sorted highest to lowest rated within each group; groups in page order; reviews in the page's order.
 6. **The only computed value in the whole document is "Based on n reviews".**
 7. **Profile picture** is the stored picture, cropped as the profile page crops it. Initials avatar only when none is stored.
+   - The renderer receives it already **resized to ~300 × 300 px JPEG**, centre-cropped square (SD-3527) — never the original upload.
 8. **Empty sections collapse.** A section with no stored data is omitted entirely — never a heading with placeholder text, never "N/A".
 9. **No PDF-only copy.** Nothing is added that the profile page does not hold: no strapline, no disclaimer, no client-specific line.
 

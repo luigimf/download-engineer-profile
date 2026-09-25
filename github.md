@@ -13,6 +13,7 @@ date: 2026-09-25T14:45:00Z
 - Replaced the PNG pixel targets with reference PDFs: `prototype/reference.pdf`, `prototype/reference-cobranded.pdf`.
 - Added SD-3529 (Zoho engineer record) and settled access + audit rules on SD-3526/SD-3527.
 - Cobranded header now uses SVG logos (client logo + Powered by Castillians) instead of PNG; `reference-cobranded.pdf` regenerated with them.
+- Profile photo resized to 300 × 300 JPEG before render (SD-3527); reference PDFs regenerated with the resized photo (~3 MB; text outlined by the print tool).
 
 ## Screen map
 
