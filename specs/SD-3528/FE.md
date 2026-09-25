@@ -12,6 +12,18 @@ Layout handoff for **SD-3528**. The document rendered by SD-3527. `prototype/ind
 - Every sheet carries the **logo band** (Castillians logo, linking to castillians.com, above a 2px brand-red rule) and a **footer** (engineer name · page number · castillians.com).
 - Page 1's band carries the **"Vetted Engineer"** label with the blue vetted mark and the vetting note. Continuation sheets carry the engineer's name with the same label and mark.
 
+## Header — two variants
+
+| Variant | When | Header, left side |
+|---|---|---|
+| **Standard** | Downloading manager's Client entry has *Cobranded Client* = No, or no manager context (Zoho, SD-3529) | Castillians logo with tagline, 36px tall, linking to castillians.com |
+| **Cobranded** | Downloading manager's Client entry has *Cobranded Client* = Yes (SD-3325) | **Client logo** first, then a 1px × 24px `#E5E5E5` divider, 12px gaps,, then the **Powered by Castillians** logo (linking to castillians.com) |
+
+- Client logo: the PNG uploaded in SD-3325's Cobranded Platform Set Up card (exactly 157 × 56), rendered at 90 × 32 — same aspect, never cropped or recoloured.
+- Powered by Castillians: `assets/logo-powered-by-castillians.png` (184 × 57), rendered at 84 × 26 — slightly smaller than the client logo, so the client leads.
+- The variant applies to **every sheet**. Right side of the band (Vetted Engineer label, engineer name on continuation sheets), body and footer are identical in both.
+- Prototypes: `prototype/index.html` (standard) and `prototype/cobranded.html` (cobranded). Pixel targets: `reference-pages/` and `reference-pages/cobranded/`.
+
 ## Section order
 
 1. **Profile header** — photo, name, rating, chips

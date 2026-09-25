@@ -23,6 +23,10 @@ Only if a Zoho button cannot authenticate to the endpoint.
 - Refresh triggers: on profile change (About, CV, skills, a newly approved review, availability, photo) **and** on a schedule as a safety net.
 - A push failure is visible — the record must not silently keep a stale file with no date.
 
+## Header
+
+The Zoho surface has no manager context, so it always renders the **standard** header — never a client's cobranded one.
+
 ## Identity
 
 - The Zoho engineer record must resolve to **exactly one** platform engineer id. An unmapped or ambiguous record cannot offer the download, and says so.

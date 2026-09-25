@@ -42,6 +42,10 @@ One component, one place in the profile-page template. If a route renders the pr
 - **The button is shown to every logged-in Manager dashboard user, for every engineer.** It is never hidden or disabled by role, by bench membership, or by whether the engineer features on Engineer Finder.
 - No change to the profile page's own content, tabs or layout in this story.
 
+## Cobranded managers
+
+No change to the button. A manager whose Client entry is cobranded (SD-3325) receives the cobranded PDF — the header choice is made server-side (SD-3527); the FE sends nothing extra.
+
 ## Copy
 
 - Button: **Download Profile**

@@ -19,6 +19,12 @@ One authenticated endpoint. Takes an engineer id, returns `application/pdf`.
 - **The written review is the full stored body** — the same text the profile page's "View full review" modal returns, never the card's truncated preview.
 - The **profile picture** is the engineer's stored picture; fall back to the platform's initials avatar only when none is stored.
 
+## Cobranding
+
+- Before rendering, resolve the requesting manager's Client entry. *Cobranded Client* = Yes → pass the client's logo (SD-3325 upload, PNG 157 × 56) to the template for the cobranded header; otherwise render the standard header. Rules in `specs/SD-3528/`.
+- Requests without a manager context (Zoho, SD-3529) always render the standard header.
+- Record the variant in the audit entry (`standard` / `cobranded:{clientId}`).
+
 ## Output
 
 | Property | Value |

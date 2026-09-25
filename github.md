@@ -4,9 +4,10 @@ path: .
 
 ## Last sync
 
-date: 2026-09-18T14:40:00Z
+date: 2026-09-25T00:00:00Z
 
 ### Updated in this project
+- Added the cobranded output (client logo + Powered by Castillians): `prototype/cobranded.html` and `reference-pages/cobranded/`.
 - Created the handover bundle: prototype + per-story FE/BE specs for epic SD-3525.
 - Bundled the `Engineer Profile PDF` canvas as a self-contained `prototype/index.html`.
 - Added per-page PNG pixel targets under `prototype/reference-pages/`.

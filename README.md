@@ -8,8 +8,10 @@ A **Download Profile** button on the engineer profile page returns the engineer'
 
 | Path | What it is |
 |---|---|
-| `prototype/index.html` | The document prototype — open it in a browser. Self-contained (styles, fonts, logo, marks, photo inlined), no build step. **This is the visual and structural source of truth for the PDF.** |
-| `prototype/reference-pages/page-1..5.png` | Pixel target for QA — each A4 sheet at 2× (1588 × 2246 px). Diff generated output against these. |
+| `prototype/index.html` | The document prototype, **standard** output — open it in a browser. Self-contained (styles, fonts, logo, marks, photo inlined), no build step. **This is the visual and structural source of truth for the PDF.** |
+| `prototype/cobranded.html` | The same prototype opening on the **cobranded** output (client logo + Powered by Castillians). Example client: Exertis. |
+| `prototype/reference-pages/page-1..5.png` | Pixel target for QA, **standard** output — each A4 sheet at 2× (1588 × 2246 px). |
+| `prototype/reference-pages/cobranded/page-1..5.png` | Pixel target for QA, **cobranded** output (example client: Exertis). |
 | `specs/SD-3526/` | Download button — `FE.md`, `BE.md` |
 | `specs/SD-3527/` | PDF generation service — `FE.md`, `BE.md` |
 | `specs/SD-3528/` | PDF document content & layout — `FE.md`, `BE.md` |
@@ -31,6 +33,13 @@ The prototype is a **print template**, not a screen. It renders five fixed A4 sh
 1. **The PDF is an extraction, not a new document.** Every value already exists on the engineer's profile page. The only computed figure is "Based on n reviews".
 2. **It is always live.** Rendered at the moment of the click, from the profile as stored then.
 3. **Generation is server-side.** The browser print path is never used, so every manager gets an identical file.
+
+## Two outputs — standard and cobranded
+
+The header depends on **who downloads**:
+
+- **Standard** — the downloading manager's Client entry has *Cobranded Client* = No (or there is no manager context, e.g. the Zoho record). Header: the Castillians logo with tagline, as today.
+- **Cobranded** — the manager's Client entry has *Cobranded Client* = Yes (SD-3325). Header: the **client's logo** (the one uploaded in the Cobranded Platform Set Up card — PNG, exactly 157 × 56) top left, then the **Powered by Castillians** logo beside it. Nothing else in the document changes.
 
 ## Build order
 

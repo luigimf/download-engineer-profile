@@ -17,6 +17,13 @@ The document is an **extraction** of the engineer's live Vetted Engineer Profile
 | Manager & Client Reviews | Reviewer name and title, role, client, period, score, **full** review body, skill tags |
 | "Based on n reviews" | **Derived** — count of reviews held against the engineer |
 
+## Header variant
+
+- Resolve the **downloading manager's** Client entry. If *Cobranded Client* = Yes (SD-3325), render the **cobranded** header with that client's uploaded logo; otherwise the **standard** header.
+- The logo is read **live** from the client record — a logo replaced in the Manage Client modal appears in the next download.
+- Cobranded but no logo stored (should not happen — the field is required in SD-3325): fall back to the standard header rather than print an empty slot.
+- The variant depends on the viewer, not the engineer: two managers from different clients downloading the same engineer can receive different headers. Content is identical.
+
 ## Verbatim rendering rules
 
 1. **Every string is rendered as stored — character for character.** Engineer- and reviewer-authored text keeps its own wording, spelling, punctuation, casing and typos. No paraphrase, no correction, no trimming, no sentence-casing. Examples that must survive intact: "developers career path", "Entrerpise Architect", "Core java", "integration" (lower-case), "It was a please to work with Andrew", "Does the Code abstract and removes dependencies on specific platforms".
